@@ -2134,49 +2134,52 @@ namespace GMap.NET.WindowsForms
                         {
                             foreach (GMapMarker m in o.Markers)
                             {
-                                if (m.IsVisible && m.IsHitTestVisible)
+                                if (m != null)
                                 {
-                                    #region -- check --
+                                    if (m.IsVisible && m.IsHitTestVisible)
+                                    {
+                                        #region -- check --
 
 #if !PocketPC
-                                    if ((MobileMode && m.LocalArea.Contains(e.X, e.Y)) ||
-                                        (!MobileMode && m.LocalAreaInControlSpace.Contains(e.X, e.Y)))
+                                        if ((MobileMode && m.LocalArea.Contains(e.X, e.Y)) ||
+                                            (!MobileMode && m.LocalAreaInControlSpace.Contains(e.X, e.Y)))
 #else
                            if(m.LocalArea.Contains(e.X, e.Y))
 #endif
-                                    {
-                                        if (!m.IsMouseOver)
                                         {
-#if !PocketPC
-                                            SetCursorHandOnEnter();
-#endif
-                                            m.IsMouseOver = true;
-                                            IsMouseOverMarker = true;
-
-                                            if (OnMarkerEnter != null)
+                                            if (!m.IsMouseOver)
                                             {
-                                                OnMarkerEnter(m);
+#if !PocketPC
+                                                SetCursorHandOnEnter();
+#endif
+                                                m.IsMouseOver = true;
+                                                IsMouseOverMarker = true;
+
+                                                if (OnMarkerEnter != null)
+                                                {
+                                                    OnMarkerEnter(m);
+                                                }
+
+                                                Invalidate();
+                                            }
+                                        }
+                                        else if (m.IsMouseOver)
+                                        {
+                                            m.IsMouseOver = false;
+                                            IsMouseOverMarker = false;
+#if !PocketPC
+                                            RestoreCursorOnLeave();
+#endif
+                                            if (OnMarkerLeave != null)
+                                            {
+                                                OnMarkerLeave(m);
                                             }
 
                                             Invalidate();
                                         }
-                                    }
-                                    else if (m.IsMouseOver)
-                                    {
-                                        m.IsMouseOver = false;
-                                        IsMouseOverMarker = false;
-#if !PocketPC
-                                        RestoreCursorOnLeave();
-#endif
-                                        if (OnMarkerLeave != null)
-                                        {
-                                            OnMarkerLeave(m);
-                                        }
 
-                                        Invalidate();
+                                        #endregion
                                     }
-
-                                    #endregion
                                 }
                             }
 

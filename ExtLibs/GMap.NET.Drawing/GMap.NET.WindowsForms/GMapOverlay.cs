@@ -335,18 +335,21 @@ namespace GMap.NET.WindowsForms
                // markers
                foreach(GMapMarker m in Markers.ToArray())
                {
-                  //if(m.IsVisible && (m.DisableRegionCheck || Control.Core.currentRegion.Contains(m.LocalPosition.X, m.LocalPosition.Y)))
-                  if(m.IsVisible || m.DisableRegionCheck)
-                  {
-                     m.OnRender(g);
-                  }
+                    //if(m.IsVisible && (m.DisableRegionCheck || Control.Core.currentRegion.Contains(m.LocalPosition.X, m.LocalPosition.Y)))
+                    if(m!=null)
+                        {
+                        if (m.IsVisible || m.DisableRegionCheck)
+                        {
+                            m.OnRender(g);
+                        }
+                    }
                }
 
                // tooltips above
                foreach(GMapMarker m in Markers.ToArray())
                {
                   //if(m.ToolTip != null && m.IsVisible && Control.Core.currentRegion.Contains(m.LocalPosition.X, m.LocalPosition.Y))
-                  if(m.ToolTip != null && m.IsVisible)
+                  if(m!=null && m.ToolTip != null && m.IsVisible)
                   {
                      if(!string.IsNullOrEmpty(m.ToolTipText) && (m.ToolTipMode == MarkerTooltipMode.Always || (m.ToolTipMode == MarkerTooltipMode.OnMouseOver && m.IsMouseOver)))
                      {

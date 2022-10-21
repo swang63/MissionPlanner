@@ -61,6 +61,10 @@ namespace MissionPlanner.GCSViews
             this.TXT_loiterrad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.myButton1 = new MissionPlanner.Controls.MyButton();
+            this.myButton2 = new MissionPlanner.Controls.MyButton();
+            this.myButton3 = new MissionPlanner.Controls.MyButton();
             this.but_writewpfast = new MissionPlanner.Controls.MyButton();
             this.BUT_write = new MissionPlanner.Controls.MyButton();
             this.BUT_read = new MissionPlanner.Controls.MyButton();
@@ -118,6 +122,23 @@ namespace MissionPlanner.GCSViews
             this.lbl_wpfile = new System.Windows.Forms.Label();
             this.BUT_loadwpfile = new MissionPlanner.Controls.MyButton();
             this.BUT_saveWPFile = new MissionPlanner.Controls.MyButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.myButton7 = new MissionPlanner.Controls.MyButton();
+            this.BUT_toggleGrid = new MissionPlanner.Controls.MyButton();
+            this.BUT_clearFire = new MissionPlanner.Controls.MyButton();
+            this.BUT_loadFire = new MissionPlanner.Controls.MyButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TXT_lastVisit = new System.Windows.Forms.TextBox();
+            this.TXT_gridMax = new System.Windows.Forms.TextBox();
+            this.TXT_gridSize = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TXT_fireFilter = new System.Windows.Forms.TextBox();
+            this.TXT_fireWindow = new System.Windows.Forms.TextBox();
+            this.TXT_fireUpdate = new System.Windows.Forms.TextBox();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.panelMap = new System.Windows.Forms.Panel();
             this.lbl_homedist = new System.Windows.Forms.Label();
@@ -219,6 +240,7 @@ namespace MissionPlanner.GCSViews
             this.zoomToMissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomToHomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelWaypoints.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Commands)).BeginInit();
@@ -227,6 +249,7 @@ namespace MissionPlanner.GCSViews
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panelMap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -280,11 +303,39 @@ namespace MissionPlanner.GCSViews
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.but_writewpfast);
             this.panel5.Controls.Add(this.BUT_write);
             this.panel5.Controls.Add(this.BUT_read);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.myButton1);
+            this.panel6.Controls.Add(this.myButton2);
+            this.panel6.Controls.Add(this.myButton3);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // myButton1
+            // 
+            resources.ApplyResources(this.myButton1, "myButton1");
+            this.myButton1.Name = "myButton1";
+            this.myButton1.UseVisualStyleBackColor = true;
+            // 
+            // myButton2
+            // 
+            resources.ApplyResources(this.myButton2, "myButton2");
+            this.myButton2.Name = "myButton2";
+            this.myButton2.UseVisualStyleBackColor = true;
+            // 
+            // myButton3
+            // 
+            resources.ApplyResources(this.myButton3, "myButton3");
+            this.myButton3.Name = "myButton3";
+            this.myButton3.UseVisualStyleBackColor = true;
             // 
             // but_writewpfast
             // 
@@ -662,13 +713,15 @@ namespace MissionPlanner.GCSViews
             // 
             // flowLayoutPanel1
             // 
+            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
-            resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
+            this.flowLayoutPanel1.Controls.Add(this.panel7);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel4
             // 
@@ -734,6 +787,117 @@ namespace MissionPlanner.GCSViews
             this.BUT_saveWPFile.Name = "BUT_saveWPFile";
             this.BUT_saveWPFile.UseVisualStyleBackColor = true;
             this.BUT_saveWPFile.Click += new System.EventHandler(this.BUT_saveWPFile_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.myButton7);
+            this.panel7.Controls.Add(this.BUT_toggleGrid);
+            this.panel7.Controls.Add(this.BUT_clearFire);
+            this.panel7.Controls.Add(this.BUT_loadFire);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.TXT_lastVisit);
+            this.panel7.Controls.Add(this.TXT_gridMax);
+            this.panel7.Controls.Add(this.TXT_gridSize);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.TXT_fireFilter);
+            this.panel7.Controls.Add(this.TXT_fireWindow);
+            this.panel7.Controls.Add(this.TXT_fireUpdate);
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // myButton7
+            // 
+            resources.ApplyResources(this.myButton7, "myButton7");
+            this.myButton7.Name = "myButton7";
+            this.myButton7.UseVisualStyleBackColor = true;
+            // 
+            // BUT_toggleGrid
+            // 
+            resources.ApplyResources(this.BUT_toggleGrid, "BUT_toggleGrid");
+            this.BUT_toggleGrid.Name = "BUT_toggleGrid";
+            this.BUT_toggleGrid.UseVisualStyleBackColor = true;
+            // 
+            // BUT_clearFire
+            // 
+            resources.ApplyResources(this.BUT_clearFire, "BUT_clearFire");
+            this.BUT_clearFire.Name = "BUT_clearFire";
+            this.BUT_clearFire.UseVisualStyleBackColor = true;
+            this.BUT_clearFire.Click += new System.EventHandler(this.BUT_clearFire_Click);
+            // 
+            // BUT_loadFire
+            // 
+            resources.ApplyResources(this.BUT_loadFire, "BUT_loadFire");
+            this.BUT_loadFire.Name = "BUT_loadFire";
+            this.BUT_loadFire.UseVisualStyleBackColor = true;
+            this.BUT_loadFire.Click += new System.EventHandler(this.BUT_loadFire_Click);
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // TXT_lastVisit
+            // 
+            resources.ApplyResources(this.TXT_lastVisit, "TXT_lastVisit");
+            this.TXT_lastVisit.Name = "TXT_lastVisit";
+            this.TXT_lastVisit.TextChanged += new System.EventHandler(this.TXT_lastVisit_TextChanged);
+            // 
+            // TXT_gridMax
+            // 
+            resources.ApplyResources(this.TXT_gridMax, "TXT_gridMax");
+            this.TXT_gridMax.Name = "TXT_gridMax";
+            // 
+            // TXT_gridSize
+            // 
+            resources.ApplyResources(this.TXT_gridSize, "TXT_gridSize");
+            this.TXT_gridSize.Name = "TXT_gridSize";
+            this.TXT_gridSize.TextChanged += new System.EventHandler(this.TXT_gridSize_TextChanged_1);
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // TXT_fireFilter
+            // 
+            resources.ApplyResources(this.TXT_fireFilter, "TXT_fireFilter");
+            this.TXT_fireFilter.Name = "TXT_fireFilter";
+            this.TXT_fireFilter.TextChanged += new System.EventHandler(this.TXT_fireFilter_TextChanged);
+            // 
+            // TXT_fireWindow
+            // 
+            resources.ApplyResources(this.TXT_fireWindow, "TXT_fireWindow");
+            this.TXT_fireWindow.Name = "TXT_fireWindow";
+            // 
+            // TXT_fireUpdate
+            // 
+            resources.ApplyResources(this.TXT_fireUpdate, "TXT_fireUpdate");
+            this.TXT_fireUpdate.Name = "TXT_fireUpdate";
             // 
             // splitter2
             // 
@@ -1464,18 +1628,22 @@ namespace MissionPlanner.GCSViews
             this.Load += new System.EventHandler(this.FlightPlanner_Load);
             this.Resize += new System.EventHandler(this.Planner_Resize);
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelWaypoints.ResumeLayout(false);
             this.panelWaypoints.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Commands)).EndInit();
             this.panelAction.ResumeLayout(false);
+            this.panelAction.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panelMap.ResumeLayout(false);
             this.panelMap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
@@ -1654,5 +1822,26 @@ namespace MissionPlanner.GCSViews
         private DataGridViewTextBoxColumn TagData;
         private ToolStripMenuItem convertWPToPolygonToolStripMenuItem;
         private ToolStripMenuItem fromCurrentWaypointsToolStripMenuItem;
+        public Panel panel6;
+        public MyButton myButton1;
+        public MyButton myButton2;
+        public MyButton myButton3;
+        public Panel panel7;
+        public Label label10;
+        public Label label12;
+        public Label label13;
+        public TextBox TXT_lastVisit;
+        public TextBox TXT_gridMax;
+        public TextBox TXT_gridSize;
+        public Label label14;
+        public Label label15;
+        public Label label16;
+        public TextBox TXT_fireFilter;
+        public TextBox TXT_fireWindow;
+        public TextBox TXT_fireUpdate;
+        public MyButton myButton7;
+        public MyButton BUT_toggleGrid;
+        public MyButton BUT_clearFire;
+        public MyButton BUT_loadFire;
     }
 }

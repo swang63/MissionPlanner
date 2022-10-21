@@ -312,6 +312,108 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="myButton1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="myButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 61</value>
+  </data>
+  <data name="myButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="myButton1.Text" xml:space="preserve">
+    <value>Write Fast</value>
+  </data>
+  <data name="&gt;&gt;myButton1.Name" xml:space="preserve">
+    <value>myButton1</value>
+  </data>
+  <data name="&gt;&gt;myButton1.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myButton1.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;myButton1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="myButton2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="myButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 32</value>
+  </data>
+  <data name="myButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="myButton2.Text" xml:space="preserve">
+    <value>Write</value>
+  </data>
+  <data name="&gt;&gt;myButton2.Name" xml:space="preserve">
+    <value>myButton2</value>
+  </data>
+  <data name="&gt;&gt;myButton2.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myButton2.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;myButton2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="myButton3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="myButton3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="myButton3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="myButton3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="myButton3.Text" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="&gt;&gt;myButton3.Name" xml:space="preserve">
+    <value>myButton3</value>
+  </data>
+  <data name="&gt;&gt;myButton3.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myButton3.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;myButton3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, -1</value>
+  </data>
+  <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 90</value>
+  </data>
+  <data name="panel6.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;panel6.Name" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;panel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel6.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="but_writewpfast.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -337,7 +439,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;but_writewpfast.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BUT_write.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -364,7 +466,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;BUT_write.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="BUT_read.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -391,13 +493,13 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;BUT_read.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 212</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 87</value>
+    <value>123, 90</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -421,7 +523,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 3</value>
+    <value>22, 2</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>79, 13</value>
@@ -535,7 +637,7 @@
     <value>3</value>
   </data>
   <data name="TXT_homealt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 65</value>
+    <value>56, 65</value>
   </data>
   <data name="TXT_homealt.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -556,7 +658,7 @@
     <value>4</value>
   </data>
   <data name="TXT_homelng.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 42</value>
+    <value>56, 42</value>
   </data>
   <data name="TXT_homelng.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -577,7 +679,7 @@
     <value>5</value>
   </data>
   <data name="TXT_homelat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 18</value>
+    <value>56, 18</value>
   </data>
   <data name="TXT_homelat.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -598,10 +700,10 @@
     <value>6</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 305</value>
+    <value>3, 308</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 89</value>
+    <value>127, 91</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -722,7 +824,7 @@
     <value>NoControl</value>
   </data>
   <data name="but_mincommands.Location" type="System.Drawing.Point, System.Drawing">
-    <value>938, 0</value>
+    <value>975, 0</value>
   </data>
   <data name="but_mincommands.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 21</value>
@@ -1161,7 +1263,7 @@
     <value>50</value>
   </data>
   <data name="Commands.Size" type="System.Drawing.Size, System.Drawing">
-    <value>968, 126</value>
+    <value>1005, 126</value>
   </data>
   <data name="Commands.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1170,7 +1272,7 @@
     <value>Commands</value>
   </data>
   <data name="&gt;&gt;Commands.Type" xml:space="preserve">
-    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.3.7898.21436, Culture=neutral, PublicKeyToken=null</value>
+    <value>MissionPlanner.Controls.MyDataGridView, MissionPlanner, Version=1.3.8329.13107, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;Commands.Parent" xml:space="preserve">
     <value>panelWaypoints</value>
@@ -1215,13 +1317,13 @@
     <value>Bottom</value>
   </data>
   <data name="panelWaypoints.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 322</value>
+    <value>0, 522</value>
   </data>
   <data name="panelWaypoints.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>21, 21</value>
   </data>
   <data name="panelWaypoints.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 166</value>
+    <value>1012, 166</value>
   </data>
   <data name="panelWaypoints.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
@@ -1248,10 +1350,10 @@
     <value>NoControl</value>
   </data>
   <data name="splitter1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 319</value>
+    <value>0, 519</value>
   </data>
   <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 3</value>
+    <value>1012, 3</value>
   </data>
   <data name="splitter1.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -1267,6 +1369,9 @@
   </data>
   <data name="&gt;&gt;splitter1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="flowLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1499,14 +1604,476 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="myButton7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="myButton7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 233</value>
+  </data>
+  <data name="myButton7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="myButton7.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="myButton7.Text" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="&gt;&gt;myButton7.Name" xml:space="preserve">
+    <value>myButton7</value>
+  </data>
+  <data name="&gt;&gt;myButton7.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;myButton7.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;myButton7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BUT_toggleGrid.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BUT_toggleGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 207</value>
+  </data>
+  <data name="BUT_toggleGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="BUT_toggleGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="BUT_toggleGrid.Text" xml:space="preserve">
+    <value>Toggle Grid</value>
+  </data>
+  <data name="&gt;&gt;BUT_toggleGrid.Name" xml:space="preserve">
+    <value>BUT_toggleGrid</value>
+  </data>
+  <data name="&gt;&gt;BUT_toggleGrid.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BUT_toggleGrid.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;BUT_toggleGrid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BUT_clearFire.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BUT_clearFire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 181</value>
+  </data>
+  <data name="BUT_clearFire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="BUT_clearFire.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="BUT_clearFire.Text" xml:space="preserve">
+    <value>Clear Fire</value>
+  </data>
+  <data name="&gt;&gt;BUT_clearFire.Name" xml:space="preserve">
+    <value>BUT_clearFire</value>
+  </data>
+  <data name="&gt;&gt;BUT_clearFire.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BUT_clearFire.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;BUT_clearFire.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BUT_loadFire.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BUT_loadFire.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 155</value>
+  </data>
+  <data name="BUT_loadFire.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 23</value>
+  </data>
+  <data name="BUT_loadFire.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="BUT_loadFire.Text" xml:space="preserve">
+    <value>Load Fire Folder</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadFire.Name" xml:space="preserve">
+    <value>BUT_loadFire</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadFire.Type" xml:space="preserve">
+    <value>MissionPlanner.Controls.MyButton, MissionPlanner.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadFire.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;BUT_loadFire.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 135</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Last Visit</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 111</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Grid Max</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 87</value>
+  </data>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Grid Size</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TXT_lastVisit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 132</value>
+  </data>
+  <data name="TXT_lastVisit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="TXT_lastVisit.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="TXT_lastVisit.Text" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;TXT_lastVisit.Name" xml:space="preserve">
+    <value>TXT_lastVisit</value>
+  </data>
+  <data name="&gt;&gt;TXT_lastVisit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXT_lastVisit.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;TXT_lastVisit.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="TXT_gridMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 108</value>
+  </data>
+  <data name="TXT_gridMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="TXT_gridMax.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="TXT_gridMax.Text" xml:space="preserve">
+    <value>2000</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridMax.Name" xml:space="preserve">
+    <value>TXT_gridMax</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridMax.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridMax.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TXT_gridSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 84</value>
+  </data>
+  <data name="TXT_gridSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="TXT_gridSize.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="TXT_gridSize.Text" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridSize.Name" xml:space="preserve">
+    <value>TXT_gridSize</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridSize.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;TXT_gridSize.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 58</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 26</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Filter
+Value</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 31</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 26</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Window
+Size</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 26</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Update
+Rate</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="TXT_fireFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 59</value>
+  </data>
+  <data name="TXT_fireFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="TXT_fireFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="TXT_fireFilter.Text" xml:space="preserve">
+    <value>0.001</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireFilter.Name" xml:space="preserve">
+    <value>TXT_fireFilter</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireFilter.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireFilter.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="TXT_fireWindow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 34</value>
+  </data>
+  <data name="TXT_fireWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="TXT_fireWindow.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="TXT_fireWindow.Text" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireWindow.Name" xml:space="preserve">
+    <value>TXT_fireWindow</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireWindow.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireWindow.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="TXT_fireUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 7</value>
+  </data>
+  <data name="TXT_fireUpdate.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="TXT_fireUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="TXT_fireUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="TXT_fireUpdate.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireUpdate.Name" xml:space="preserve">
+    <value>TXT_fireUpdate</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireUpdate.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;TXT_fireUpdate.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 405</value>
+  </data>
+  <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 280</value>
+  </data>
+  <data name="panel7.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;panel7.Name" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;panel7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel7.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel1.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>TopDown</value>
   </data>
   <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 488</value>
+    <value>131, 688</value>
   </data>
   <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -1527,13 +2094,13 @@
     <value>Right</value>
   </data>
   <data name="panelAction.Location" type="System.Drawing.Point, System.Drawing">
-    <value>975, 0</value>
+    <value>1012, 0</value>
   </data>
   <data name="panelAction.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>21, 21</value>
   </data>
   <data name="panelAction.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 488</value>
+    <value>131, 688</value>
   </data>
   <data name="panelAction.TabIndex" type="System.Int32, mscorlib">
     <value>50</value>
@@ -1560,10 +2127,10 @@
     <value>NoControl</value>
   </data>
   <data name="splitter2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>972, 0</value>
+    <value>1009, 0</value>
   </data>
   <data name="splitter2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>3, 319</value>
+    <value>3, 519</value>
   </data>
   <data name="splitter2.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -1647,13 +2214,13 @@
     <value>NoControl</value>
   </data>
   <data name="trackBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>938, 21</value>
+    <value>975, 21</value>
   </data>
   <data name="trackBar1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="trackBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 295</value>
+    <value>45, 495</value>
   </data>
   <data name="trackBar1.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
@@ -1680,7 +2247,7 @@
     <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>941, 5</value>
+    <value>978, 5</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 13</value>
@@ -1749,7 +2316,7 @@
     <value>Rally</value>
   </data>
   <data name="cmb_missiontype.Location" type="System.Drawing.Point, System.Drawing">
-    <value>798, 3</value>
+    <value>835, 3</value>
   </data>
   <data name="cmb_missiontype.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 28</value>
@@ -1776,7 +2343,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="deleteWPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="deleteWPToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete WP</value>
@@ -1788,13 +2355,13 @@
     <value>At Current Position</value>
   </data>
   <data name="insertWpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="insertWpToolStripMenuItem.Text" xml:space="preserve">
     <value>Insert Wp</value>
   </data>
   <data name="insertSplineWPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="insertSplineWPToolStripMenuItem.Text" xml:space="preserve">
     <value>Insert Spline WP</value>
@@ -1818,7 +2385,7 @@
     <value>Circles</value>
   </data>
   <data name="loiterToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="loiterToolStripMenuItem.Text" xml:space="preserve">
     <value>Loiter</value>
@@ -1836,43 +2403,43 @@
     <value>WP #</value>
   </data>
   <data name="jumpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="jumpToolStripMenuItem.Text" xml:space="preserve">
     <value>Jump</value>
   </data>
   <data name="rTLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="rTLToolStripMenuItem.Text" xml:space="preserve">
     <value>RTL</value>
   </data>
   <data name="landToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="landToolStripMenuItem.Text" xml:space="preserve">
     <value>Land</value>
   </data>
   <data name="takeoffToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="takeoffToolStripMenuItem.Text" xml:space="preserve">
     <value>Takeoff</value>
   </data>
   <data name="setROIToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="setROIToolStripMenuItem.Text" xml:space="preserve">
     <value>DO_SET_ROI</value>
   </data>
   <data name="clearMissionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="clearMissionToolStripMenuItem.Text" xml:space="preserve">
     <value>Clear Mission</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 6</value>
+    <value>137, 6</value>
   </data>
   <data name="addPolygonPointToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 22</value>
@@ -1917,7 +2484,7 @@
     <value>Area</value>
   </data>
   <data name="polygonToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="polygonToolStripMenuItem.Text" xml:space="preserve">
     <value>Polygon</value>
@@ -1959,7 +2526,7 @@
     <value>Clear</value>
   </data>
   <data name="geoFenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="geoFenceToolStripMenuItem.Text" xml:space="preserve">
     <value>Geo-Fence</value>
@@ -2001,49 +2568,49 @@
     <value>Load Rally from File</value>
   </data>
   <data name="rallyPointsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="rallyPointsToolStripMenuItem.Text" xml:space="preserve">
     <value>Rally Points</value>
   </data>
   <data name="createWpCircleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>179, 22</value>
   </data>
   <data name="createWpCircleToolStripMenuItem.Text" xml:space="preserve">
     <value>Create Wp Circle</value>
   </data>
   <data name="createSplineCircleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>179, 22</value>
   </data>
   <data name="createSplineCircleToolStripMenuItem.Text" xml:space="preserve">
     <value>Create Spline Circle</value>
   </data>
   <data name="areaToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>179, 22</value>
   </data>
   <data name="areaToolStripMenuItem1.Text" xml:space="preserve">
     <value>Area</value>
   </data>
   <data name="textToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>179, 22</value>
   </data>
   <data name="textToolStripMenuItem.Text" xml:space="preserve">
     <value>Text</value>
   </data>
   <data name="createCircleSurveyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>179, 22</value>
   </data>
   <data name="createCircleSurveyToolStripMenuItem.Text" xml:space="preserve">
     <value>Create Circle Survey</value>
   </data>
   <data name="surveyGridToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>179, 22</value>
   </data>
   <data name="surveyGridToolStripMenuItem.Text" xml:space="preserve">
     <value>Survey (Grid)</value>
   </data>
   <data name="autoWPToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="autoWPToolStripMenuItem.Text" xml:space="preserve">
     <value>Auto WP</value>
@@ -2097,7 +2664,7 @@
     <value>Reverse WPs</value>
   </data>
   <data name="mapToolToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="mapToolToolStripMenuItem.Text" xml:space="preserve">
     <value>Map Tool</value>
@@ -2133,7 +2700,7 @@
     <value>Load SHP File</value>
   </data>
   <data name="fileLoadSaveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="fileLoadSaveToolStripMenuItem.Text" xml:space="preserve">
     <value>File Load/Save</value>
@@ -2157,43 +2724,43 @@
     <value>Edit</value>
   </data>
   <data name="pOIToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="pOIToolStripMenuItem.Text" xml:space="preserve">
     <value>POI</value>
   </data>
   <data name="trackerHomeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="trackerHomeToolStripMenuItem.Text" xml:space="preserve">
     <value>Tracker Home</value>
   </data>
   <data name="modifyAltToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="modifyAltToolStripMenuItem.Text" xml:space="preserve">
     <value>Modify Alt</value>
   </data>
   <data name="enterUTMCoordToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="enterUTMCoordToolStripMenuItem.Text" xml:space="preserve">
     <value>Enter UTM Coord</value>
   </data>
   <data name="switchDockingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="switchDockingToolStripMenuItem.Text" xml:space="preserve">
     <value>Switch Docking</value>
   </data>
   <data name="setHomeHereToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="setHomeHereToolStripMenuItem.Text" xml:space="preserve">
     <value>Set Home Here</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 516</value>
+    <value>141, 494</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>
@@ -2205,7 +2772,7 @@
     <value>0, 0</value>
   </data>
   <data name="MainMap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>935, 315</value>
+    <value>972, 515</value>
   </data>
   <data name="MainMap.TabIndex" type="System.Int32, mscorlib">
     <value>45</value>
@@ -2232,7 +2799,7 @@
     <value>27, 27</value>
   </data>
   <data name="panelMap.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 322</value>
+    <value>1012, 522</value>
   </data>
   <data name="panelMap.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -2307,7 +2874,7 @@
     <value>0, 0</value>
   </data>
   <data name="panelBASE.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1106, 488</value>
+    <value>1143, 688</value>
   </data>
   <data name="panelBASE.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -2403,7 +2970,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1106, 488</value>
+    <value>1143, 688</value>
   </data>
   <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
     <value>dataGridViewImageColumn1</value>
