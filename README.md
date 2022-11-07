@@ -86,7 +86,9 @@ You can debug Mission Planner on Mono with `MONO_LOG_LEVEL=debug mono MissionPla
 
 [![FlagCounter](https://s01.flagcounter.com/count2/A4bA/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_40/viewers_0/labels_1/pageviews_0/flags_0/percent_0/)](https://info.flagcounter.com/A4bA)
 
-#### MISSION PLANNER FIRE CHANGES
+## MISSION PLANNER FIRE CHANGES
+Software Code Parameters
+
 Window:
 This value determines the size of the window of fire files to keep displayed on the map.  This window refers to each of the fire map “LOC######.TXT” where the number corresponds to a particular second of the fire as observed by the UAV.  The window thereby is set in seconds from last file to display.  300 seconds or 5 minutes is set as the default value
 
