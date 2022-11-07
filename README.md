@@ -88,6 +88,9 @@ You can debug Mission Planner on Mono with `MONO_LOG_LEVEL=debug mono MissionPla
 
 ## MISSION PLANNER FIRE CHANGES
 Software Code Parameters utilized for running the software.  The parameters below are viewable through on the Plan UI page as indicated by the photo below.
+
+Downloadable packaged executable is available [here](https://drive.google.com/file/d/151-bQHUIuAc0FLrAP546ekRpFwh3Swbo/view?usp=sharing)
+
 ![Planner UI](https://github.com/swang63/MissionPlanner/blob/Test2/PlanUI.JPG?raw=true)
 
 Window:
