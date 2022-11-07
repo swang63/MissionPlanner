@@ -86,3 +86,20 @@ You can debug Mission Planner on Mono with `MONO_LOG_LEVEL=debug mono MissionPla
 
 [![FlagCounter](https://s01.flagcounter.com/count2/A4bA/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_40/viewers_0/labels_1/pageviews_0/flags_0/percent_0/)](https://info.flagcounter.com/A4bA)
 
+#### MISSION PLANNER FIRE CHANGES
+Window:
+This value determines the size of the window of fire files to keep displayed on the map.  This window refers to each of the fire map “LOC######.TXT” where the number corresponds to a particular second of the fire as observed by the UAV.  The window thereby is set in seconds from last file to display.  300 seconds or 5 minutes is set as the default value
+
+Update:
+This value will update and reload the fireMap upon the number of files loaded.  Default value is set to 10.  This will update the map for values of time since last visit metrics for display.
+
+Filter Value:
+This value is set to 0.001 by default.  This value is the measure in degrees.  This filter value will include files of numerical order if the average latitude and longitude difference between the files is less than this value.  This will remove files in which the projected fire map appears to “jump” a far distance.  Files that have no preceding location file will be ignored so if there is a jump in the number of the location file.  The subsequent files will NOT be filtered.
+
+Last Visit:
+This will display fire files that exceed the time since the last visit in a green color.  This parameter is set in seconds and is defaulted to 60 seconds.
+
+Grid Size:
+This is the size in which the data is discretized from the fire files.  Default grid size is set to 500x500.  If there are issues with lag regarding the map interface and number of markers.
+
+
