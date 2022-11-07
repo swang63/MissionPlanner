@@ -261,7 +261,7 @@ namespace GMap.NET.WindowsForms
          {
             foreach(GMapMarker obj in Markers)
             {
-               if(obj.IsVisible)
+               if(obj != null && obj.IsVisible)
                {
                   Control.UpdateMarkerLocalPosition(obj);
                }
@@ -269,7 +269,7 @@ namespace GMap.NET.WindowsForms
 
             foreach(GMapPolygon obj in Polygons)
             {
-               if(obj.IsVisible)
+               if(obj != null && obj.IsVisible)
                {
                   Control.UpdatePolygonLocalPosition(obj);
                }

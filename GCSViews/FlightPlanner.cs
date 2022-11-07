@@ -135,6 +135,8 @@ namespace MissionPlanner.GCSViews
 
         //ADDED PUBLIC PARAMETERS
         public static double meterToDeg = 0.0000089;
+        public static double meterToDegLng = 0.0000089;
+        public static double meterToDegLat = 0.0000115;
         public static int angGranularity = 360;
         public static int gridSize = 500;
         public static int gridMax = 2000;
@@ -142,6 +144,9 @@ namespace MissionPlanner.GCSViews
         public GMapOverlay fireMarkers;
         public GMapOverlay fireMarkersNew;
         public GMapOverlay fireBound;
+        public GMapOverlay fireGridBound;
+        public GMapPolygon gridBoundBox;
+
         //New empty parameters
         public bool[,] fireArray = new bool[gridSize, gridSize];
         public bool[,] fireArrayNew = new bool[gridSize, gridSize];
@@ -165,7 +170,10 @@ namespace MissionPlanner.GCSViews
         public double Xmin;
         public double Ymin;
         public double cellCONV = meterToDeg*gridMax/gridSize;
+        public double cellCONVLat = meterToDegLat * gridMax / gridSize;
+        public double cellCONVLng = meterToDegLng * gridMax / gridSize;
         public PointLatLng FireCenter;
+        public bool gridBoxActive;
      
         
 
@@ -311,6 +319,12 @@ namespace MissionPlanner.GCSViews
             drawnpolygon.Stroke = new Pen(Color.Red, 2);
             drawnpolygon.Fill = Brushes.Transparent;
 
+            //setup fireboundGrid
+            List<PointLatLng> polygonPoints3 = new List<PointLatLng>();
+            gridBoundBox = new GMapPolygon(polygonPoints3, "gridBoundary");
+            gridBoundBox.Stroke = new Pen(Color.Red, 2);
+            gridBoundBox.Fill = Brushes.Transparent;
+
             /*
             var timer = new System.Timers.Timer();
 
@@ -327,10 +341,12 @@ namespace MissionPlanner.GCSViews
             fireMarkers = new GMapOverlay("OldfireMarkers");
             fireMarkersNew = new GMapOverlay("NewFireMarkers");
             fireBound = new GMapOverlay("fireBoundary");
+            fireGridBound = new GMapOverlay("gridBoundary");
 
             MainMap.Overlays.Add(fireBound);
             MainMap.Overlays.Add(fireMarkers);
             MainMap.Overlays.Add(fireMarkersNew);
+            MainMap.Overlays.Add(fireGridBound);
 
             for (int i = 0; i < 360; i++) 
             {
@@ -340,7 +356,7 @@ namespace MissionPlanner.GCSViews
                 minDist[i, 1] = 500;
             }
 
-
+            gridBoxActive = false;
         }
 
         public static FlightPlanner instance { get; set; }
@@ -7731,8 +7747,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             foreach (PointLatLng v in temp)
             {
 
-                double dltLat = ((v.Lat - Xmin) / cellCONV);
-                double dltLng = ((v.Lng - Ymin) / cellCONV);
+                double dltLat = ((v.Lat - Xmin) / cellCONVLat);
+                double dltLng = ((v.Lng - Ymin) / cellCONVLng);
 
                 int rownum = Convert.ToInt32(dltLat);
                 int colnum = Convert.ToInt32(dltLng);
@@ -7833,8 +7849,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 //Plot Outer Boundary
                 if (maxDist[i, 0] > 0.00001)
                 {
-                    bcell.Lat = Xmin + (cellCONV * maxDist[i, 1]);
-                    bcell.Lng = Ymin + (cellCONV * maxDist[i, 2]);
+                    bcell.Lat = Xmin + (cellCONVLat * maxDist[i, 1]);
+                    bcell.Lng = Ymin + (cellCONVLng * maxDist[i, 2]);
                     var bpnt = new GMarkerBoundOut(bcell, pxSize, true);
                     fireBound.Markers.Add(bpnt);
 
@@ -7842,8 +7858,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 //Plot Inner Boundary
                 if (minDist[i, 0] < 500)
                 {
-                    bcell.Lat = Xmin + (cellCONV * minDist[i, 1]);
-                    bcell.Lng = Ymin + (cellCONV * minDist[i, 2]);
+                    bcell.Lat = Xmin + (cellCONVLat * minDist[i, 1]);
+                    bcell.Lng = Ymin + (cellCONVLng * minDist[i, 2]);
                     var bpnt = new GMarkerBoundOut(bcell, pxSize, false);
                     fireBound.Markers.Add(bpnt);
                 }
@@ -7904,7 +7920,12 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         public bool fireUpdated()
         {
-            if (currFilePlot == lastFileLoaded)
+            string[] allFiles = Directory.GetFiles(fireFolderDirectory);
+            string endFile = allFiles[allFiles.Length - 1];
+            string endFname = System.IO.Path.GetFileNameWithoutExtension(endFile);
+            string endIndex = endFname.Substring(3);
+            int EndNumber = Int32.Parse(endIndex);
+            if (EndNumber == lastFileLoaded)
             {
                 return true;
             }
@@ -7945,12 +7966,13 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
 
                         //double cellMult = gridMax / gridSize;
-                        cellCONV = meterToDeg * gridMax/gridSize;
+                        cellCONVLat = meterToDegLat * gridMax/gridSize;
+                        cellCONVLng = meterToDegLng * gridMax / gridSize;
 
-                        Xmin = newCenter.Lat - (gridSize / 2 * cellCONV);
-                        Ymin = newCenter.Lng - (gridSize / 2 * cellCONV);
+                        Xmin = newCenter.Lat - (gridSize / 2 * cellCONVLat);
+                        Ymin = newCenter.Lng - (gridSize / 2 * cellCONVLng);
 
-                        MessageBox.Show(Xmin.ToString());
+                        //MessageBox.Show(Xmin.ToString());
 
                         MainMap.Position = newCenter;
 
@@ -8046,8 +8068,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             {
                 count++;
                 //Calculate Differences
-                double dltLat = ((v.Lat - Xmin) / cellCONV);
-                double dltLng = ((v.Lng - Ymin) / cellCONV);
+                double dltLat = ((v.Lat - Xmin) / cellCONVLat);
+                double dltLng = ((v.Lng - Ymin) / cellCONVLng);
                 //
                 int rownum = Convert.ToInt32(dltLat);
                 int colnum = Convert.ToInt32(dltLng);
@@ -8091,20 +8113,21 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 {
                     if (fireArrayPrev[i, j] == true)
                     {
-                        if (fireArray[i, j] == true)
+                        if (fireArray[i, j] == false)
                         {
                             var fcell = new PointLatLng();
-                            fcell.Lat = Xmin + (cellCONV * i);
-                            fcell.Lng = Ymin + (cellCONV * j);
+                            fcell.Lat = Xmin + (cellCONVLat * i);
+                            fcell.Lng = Ymin + (cellCONVLng * j);
                             var pnt = new GMarkerPoint(fcell, pxSize, 2);
                             fireMarkersNew.Markers.Add(pnt);
+                            //MessageBox.Show("breakpoint");
                         }
                     }
                     if (fireArray[i, j] == true)
                     {
                         var fcell = new PointLatLng();
-                        fcell.Lat = Xmin + (cellCONV * i);
-                        fcell.Lng = Ymin + (cellCONV * j);
+                        fcell.Lat = Xmin + (cellCONVLat * i);
+                        fcell.Lng = Ymin + (cellCONVLng * j);
                         var pnt = new GMarkerPoint(fcell, pxSize, 1);
                         fireMarkersNew.Markers.Add(pnt);
                     }
@@ -8114,8 +8137,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         public void PlotFireNew(int pxSize)
         {
-            double cellSizeLT = cellCONV;
-            double cellSizeLNG = cellCONV;
+            double cellSizeLT = cellCONVLat;
+            double cellSizeLNG = cellCONVLng;
 
             fireLastVisit = (Int32.Parse(TXT_lastVisit.Text));
             if (!firstLoad)
@@ -8136,6 +8159,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                             {
                                 var pnt = new GMarkerPoint(fcell, pxSize, 2);
                                 fireMarkersNew.Markers.Add(pnt);
+                                //MessageBox.Show("breakpoint");
                             }
                             else
                             {
@@ -8192,8 +8216,8 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             FireCenter.Lng = (double.Parse(TXT_homelng.Text));
             foreach (PointLatLng v in temp)
             {
-                double dltLat = ((v.Lat - Xmin) / cellCONV);
-                double dltLng = ((v.Lng - Ymin) / cellCONV);
+                double dltLat = ((v.Lat - Xmin) / cellCONVLat);
+                double dltLng = ((v.Lng - Ymin) / cellCONVLng);
 
                 int rownum = Convert.ToInt32(dltLat);
                 int colnum = Convert.ToInt32(dltLng);
@@ -8233,6 +8257,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                         doWork();
                     }
                 }
+                
 
             }
             public void threadWork(object data)
@@ -8341,7 +8366,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                                 FPInstance.firstLoad = true;
                                 if ((fileUpdateCount % fireUpdateValue) == 0)
                                 {
-                                    //FPInstance.fireMarkersNew.Clear();
+                                    FPInstance.fireMarkersNew.Clear();
                                     FPInstance.plotOldreColor(2);
                                 }
 
@@ -8385,9 +8410,46 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
             }
 
+
+        public void drawFireBoundGrid(List<PointLatLngAlt> list)
+        {
+            gridBoundBox.Points.Clear();
+            fireGridBound.Clear();
+
+            int tag = 0;
+            list.ForEach(x =>
+            {
+                tag++;
+                gridBoundBox.Points.Add(x);
+            });
+
+            fireGridBound.Polygons.Add(gridBoundBox);
+            MainMap.UpdatePolygonLocalPosition(gridBoundBox);
+
+            {
+                foreach (var pointLatLngAlt in gridBoundBox.Points.CloseLoop().PrevNowNext())
+                {
+                    var now = pointLatLngAlt.Item2;
+                    var next = pointLatLngAlt.Item3;
+
+                    if (now == null || next == null)
+                        continue;
+
+                    var mid = new PointLatLngAlt((now.Lat + next.Lat) / 2, (now.Lng + next.Lng) / 2, 0);
+
+                }
+            }
+
+            MainMap.Invalidate();
+        }
+
         private void TXT_lastVisit_TextChanged(object sender, EventArgs e)
         {
-
+            if (TXT_lastVisit.Text.Length != 0)
+            {
+                fireLastVisit = (Int32.Parse(TXT_lastVisit.Text));
+            }
+            
         }
 
         private void TXT_gridSize_TextChanged_1(object sender, EventArgs e)
@@ -8397,10 +8459,11 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             {
                 gridSize = (Int32.Parse(TXT_gridSize.Text));
                 double cellMult = gridMax / gridSize;
-                cellCONV = meterToDeg * cellMult;
+                cellCONVLat = meterToDegLat * cellMult;
+                cellCONVLng = meterToDegLat * cellMult;
 
-                Xmin = FireCenter.Lat - (gridSize / 2 * cellCONV);
-                Ymin = FireCenter.Lng - (gridSize / 2 * cellCONV);
+                Xmin = FireCenter.Lat - (gridSize / 2 * cellCONVLat);
+                Ymin = FireCenter.Lng - (gridSize / 2 * cellCONVLng);
 
                 fireArray = new bool[gridSize, gridSize];
                 fireArrayPrev = new bool[gridSize, gridSize];
@@ -8418,15 +8481,17 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             gridSize = (Int32.Parse(TXT_gridSize.Text));
             gridMax = (Int32.Parse(TXT_gridMax.Text));
             double cellMult = gridMax / gridSize;
-            cellCONV = meterToDeg * cellMult;
+            cellCONVLat = meterToDegLat * cellMult;
+            cellCONVLng = meterToDegLng * cellMult;
 
-            Xmin = FireCenter.Lat - (gridSize / 2 * cellCONV);
-            Ymin = FireCenter.Lng - (gridSize / 2 * cellCONV);
+            Xmin = FireCenter.Lat - (gridSize / 2 * cellCONVLat);
+            Ymin = FireCenter.Lng - (gridSize / 2 * cellCONVLng);
 
             fireArray = new bool[gridSize, gridSize];
             fireArrayPrev = new bool[gridSize, gridSize];
             fireArrayNew = new bool[gridSize, gridSize];
             fireTrack = new int[gridSize * gridSize, 2];
+            avgDist = new double[360, 10];
             fireCenterVals.Clear();
             for (int i = 0; i < 360; i++)
             {
@@ -8444,6 +8509,74 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             {
                 minDegDiff = double.Parse(TXT_fireFilter.Text);
             }
+        }
+
+        private void myButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXT_fireUpdate_TextChanged(object sender, EventArgs e)
+        {
+            if (TXT_fireUpdate.Text.Length != 0) 
+            {
+                fireWindowUpdate = (Int32.Parse(TXT_fireUpdate.Text));
+            }
+        }
+
+        private void BUT_toggleGrid_Click(object sender, EventArgs e)
+        {
+            //If grid is not active, turn it on.
+            if (!gridBoxActive)
+            {
+                gridSize = (Int32.Parse(TXT_gridSize.Text));
+                gridMax = (Int32.Parse(TXT_gridMax.Text));
+                double cellCONVLat = meterToDegLng * gridMax / gridSize;
+                double cellCONVLng = meterToDegLat * gridMax / gridSize;
+                //Create points for upper left, right, and bottom left,right for grid boundary
+                PointLatLng UL, UR, BL, BR;
+                UL = new PointLatLng();
+                UR = new PointLatLng();
+                BL = new PointLatLng();
+                BR = new PointLatLng();
+
+                List<PointLatLngAlt> fireBox = new List<PointLatLngAlt>();
+
+                FireCenter.Lat = (double.Parse(TXT_homelat.Text));
+                FireCenter.Lng = (double.Parse(TXT_homelng.Text));
+
+                Xmin = FireCenter.Lat - (gridSize / 2 * cellCONVLat);
+                Ymin = FireCenter.Lng - (gridSize / 2 * cellCONVLng);
+
+
+                double Xmax = Xmin + gridSize * cellCONVLat;
+                double Ymax = Ymin + gridSize * cellCONVLng;
+
+                UL.Lat = Xmin;
+                UL.Lng = Ymax;
+                UR.Lat = Xmax;
+                UR.Lng = Ymax;
+                BL.Lat = Xmin;
+                BL.Lng = Ymin;
+                BR.Lat = Xmax;
+                BR.Lng = Ymin;
+
+                fireBox.Add(UL);
+                fireBox.Add(BL);
+                fireBox.Add(BR);
+                fireBox.Add(UR);
+
+                drawFireBoundGrid(fireBox);
+                gridBoxActive = true;
+            }
+            //Turn off Grid box if it is active
+            else 
+            {
+                fireGridBound.Clear();
+                gridBoxActive = false;
+            }
+            
+
         }
     }
 
